@@ -16,7 +16,8 @@ field_s*
 alloc_field
 (
     size_t x, size_t y,
-    size_t mine_count
+    size_t mine_count,
+    char icon
 );
 
 field_s* 
