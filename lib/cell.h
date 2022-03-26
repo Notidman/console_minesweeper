@@ -19,7 +19,7 @@ typedef enum cell_around
 
 typedef struct cell
 {
-  struct cell* cell_around;
+  struct cell** cell_around;
 
   char icon;
   bool contains_mine;
@@ -32,9 +32,16 @@ alloc_cell(
     char icon
 );
 
-cell_s* 
+void
 free_cell(
     cell_s *cell
+);
+
+void
+tying_cell(
+    cell_s *dest,
+    cell_s *src,
+    cell_around_t where
 );
 
 #endif // CEL

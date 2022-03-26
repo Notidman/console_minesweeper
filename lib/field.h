@@ -4,8 +4,10 @@
 
 typedef struct field
 {
-  size_t size_x;
-  size_t size_y;
+  size_t x;
+  size_t y;
+  size_t S;
+
   size_t mine_count;
 
   cell_s** cells;
@@ -20,7 +22,7 @@ alloc_field
     char icon
 );
 
-field_s* 
+void
 free_field(
     field_s *field
 );
