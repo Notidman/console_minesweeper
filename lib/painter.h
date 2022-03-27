@@ -7,4 +7,8 @@ void
 draw_field_with_mines(
   field_s *field);
 
+void
+draw_field(
+    field_s *field);
+
 #endif /* PAINTER_H */

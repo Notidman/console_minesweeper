@@ -9,6 +9,7 @@ set( SRC
      src/field.c
      src/tester.c
      src/painter.c
+     src/lpct.c
    )
 
 add_executable(${PROJECT_NAME} ${SRC})

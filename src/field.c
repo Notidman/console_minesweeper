@@ -82,13 +82,14 @@ void
 tying_field(
     field_s *field)
 {
-  for(size_t row = 0; row < field->y; ++row)
+  for(size_t row = 0; row < field->y - 1; ++row)
   {
-    for(size_t col = 0; col < field->x; ++col)
+    for(size_t col = 0; col < field->x - 1; ++col)
     {
       for(cell_around_t where = top; where != left_top; ++where)
       {
-        field->cells[row][col]
+        tying_cell(field->cells[row][col],
+            field->cells[row+1][col+1], where);
       }
     }
   }
@@ -98,7 +99,6 @@ void
 activate_mines_in_cells(
     field_s *field, size_t mine_count)
 {
-  puts("Hi! activ mines");
   size_t v = 0;
   for(size_t i = 0; mine_count; ++i)
   {
@@ -116,5 +116,4 @@ activate_mines_in_cells(
 
     }
   }
-  puts("End! activ mines");
 }

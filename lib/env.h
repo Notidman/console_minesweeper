@@ -1,18 +1,18 @@
 #pragma once
 #ifndef ENV_H
 #define ENV_H
-#include <stddef.h>
+#include "lpct.h"
 
-const size_t 
-MINE_COUNT = 12;
+#define MINE_COUNT 12
 
-const size_t 
-X_FIELD = 5;
+#define X_FIELD 20
 
-const size_t 
-Y_FIELD = 5;
+#define Y_FIELD 20
 
-const char 
-ICON_CELL = '@';
+#define ICON_CELL '$'
+
+#define CELL_AROUND_COUNT 8
+
+#define COLOR_FIELD red
 
 #endif /* ENV_H */

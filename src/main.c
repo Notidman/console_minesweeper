@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "tester.h"
 #include "env.h"
+#include "tester.h"
 #include "painter.h"
 
 int 
@@ -14,7 +14,7 @@ main(void)
       Y_FIELD,
       MINE_COUNT, ICON_CELL);
 
-  draw_field_with_mines(field);
+  draw_field(field);
   test_field_content_mines(field, MINE_COUNT);
   free_field(field);
   return EXIT_SUCCESS;

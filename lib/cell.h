@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-#define CELL_AROUND_COUNT 8
+#include "env.h"
 
 typedef enum cell_around
 {
