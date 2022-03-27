@@ -88,6 +88,7 @@ tying_field(
     {
       for(cell_around_t where = top; where != left_top; ++where)
       {
+        field->cells[row][col]
       }
     }
   }
