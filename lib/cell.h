@@ -1,3 +1,4 @@
+#pragma once
 #ifndef CELL_H
 #define CELL_H
 #include <stdbool.h>
@@ -44,4 +45,4 @@ tying_cell(
     cell_around_t where
 );
 
-#endif // CEL
+#endif /* CELL_H */
