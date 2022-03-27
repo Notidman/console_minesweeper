@@ -98,12 +98,13 @@ activate_mines_in_cells(
     field_s *field, size_t mine_count)
 {
   puts("Hi! activ mines");
-  double v = 0;
+  size_t v = 0;
   for(size_t i = 0; mine_count; ++i)
   {
     if( i >= field->y)  {i = 0;}
     for(size_t j = 0; j < field->x; ++j)
     {
+      if( mine_count == 0 ) { break; }
       v = 1 + rand() % mine_count;
       if( v >= mine_count && 
           field->cells[i][j]->contains_mine == false)

@@ -15,7 +15,7 @@ main(void)
       MINE_COUNT, ICON_CELL);
 
   draw_field_with_mines(field);
-// test_field_content_mines(field, MINE_COUNT);
+  test_field_content_mines(field, MINE_COUNT);
   free_field(field);
   return EXIT_SUCCESS;
 }
