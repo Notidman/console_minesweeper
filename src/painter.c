@@ -35,3 +35,13 @@ draw_field(
     puts("");
   }
 }
+
+void
+clrscr(void)
+{
+  for(size_t i = 0; i < 100; ++i)
+  {
+    puts("");
+  }
+  puts("");
+}

@@ -14,8 +14,11 @@ main(void)
       Y_FIELD,
       MINE_COUNT, ICON_CELL);
 
+  clrscr();
   draw_field(field);
-  test_field_content_mines(field, MINE_COUNT);
+  while(true)
+  {
+  }
   free_field(field);
   return EXIT_SUCCESS;
 }

@@ -11,4 +11,7 @@ void
 draw_field(
     field_s *field);
 
+void
+clrscr(void);
+
 #endif /* PAINTER_H */

@@ -86,11 +86,7 @@ tying_field(
   {
     for(size_t col = 0; col < field->x - 1; ++col)
     {
-      for(cell_around_t where = top; where != left_top; ++where)
-      {
-        tying_cell(field->cells[row][col],
-            field->cells[row+1][col+1], where);
-      }
+      //if( field->cells[row][col]
     }
   }
 }

@@ -5,14 +5,14 @@
 
 #define MINE_COUNT 12
 
-#define X_FIELD 20
+#define X_FIELD 10
 
-#define Y_FIELD 20
+#define Y_FIELD 10
 
 #define ICON_CELL '$'
 
 #define CELL_AROUND_COUNT 8
 
-#define COLOR_FIELD red
+#define COLOR_FIELD blue
 
 #endif /* ENV_H */
