@@ -113,3 +113,11 @@ activate_mines_in_cells(
     }
   }
 }
+
+void
+active_cell(
+    field_s *field,
+    size_t coord)
+{
+
+}
