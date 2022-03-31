@@ -1,15 +1,14 @@
 cmake_minimum_required(VERSION 3.2)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+project(console_minesweeper LANGUAGES C)
+set(CMAKE_CXX_STANDARD 18) 
+
+set(CMAKE_CXX_FLAGS "\${CMAKE_CXX_FLAGS} -std=c18 -Werror -Wall -Wextra -Wpedantic -fPIC -march=native -pthread -g")
+set(CMAKE_CXX_FLAGS_RELEASE "-std=c18 -O2 -fPIC -march=native -pthread")
 
 include_directories(lib)
-project(console_minesweeper)
+set(PROJECT_SOURCES_DIR src)
+file(GLOB_RECURSE SOURCES \${PROJECT_SOURCES_DIR}/*.c)
 
-set( SRC
-     src/main.c
-     src/cell.c
-     src/field.c
-     src/tester.c
-     src/painter.c
-     src/lpct.c
-   )
+add_executable(\${PROJECT_NAME} \${SOURCES})
 
-add_executable(${PROJECT_NAME} ${SRC})
