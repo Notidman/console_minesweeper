@@ -28,4 +28,9 @@ free_field(
     field_s *field
 );
 
+void
+active_cell(
+    field_s *field
+);
+
 #endif /* FIELD_H */

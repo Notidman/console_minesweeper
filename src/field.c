@@ -82,11 +82,69 @@ void
 tying_field(
     field_s *field)
 {
-  for(size_t row = 0; row < field->y - 1; ++row)
+  for(size_t row = 0; row < field->y; ++row)
   {
-    for(size_t col = 0; col < field->x - 1; ++col)
+    for(size_t col = 0; col < field->x; ++col)
     {
-      //if( field->cells[row][col]
+      for (cell_around_t where = top; where != left_top + 1; ++where) 
+      {
+        if (where == top) 
+        {
+          if (col - 1 >= 0)
+          {
+            tying_cell(field->cells[row][col], field->cells[row][col - 1], top);
+          }
+        }
+        else if (where == right_top)
+        {
+          if (row + 1 <= field->x && col - 1 >= 0)
+          {
+            tying_cell(field->cells[row][col], field->cells[row + 1][col - 1], right_top);
+          }
+        }
+        else if (where == right)
+        {
+          if (row + 1 <= field->x)
+          {
+            tying_cell(field->cells[row][col], field->cells[row + 1][col], right);
+          }
+        }
+        else if (where == right_buttom)
+        {
+          if (row + 1 <= field->x && col + 1 <= field->y)
+          {
+              tying_cell(field->cells[row][col], field->cells[row + 1][col + 1], right_buttom);
+          }
+        }
+        else if (where == buttom)
+        {
+          if (col + 1 <= field->y)
+          {
+            tying_cell(field->cells[row][col], field->cells[row][col + 1], buttom);
+          }
+        }
+        else if (where == left_buttom)
+        {
+          if (row - 1 >= 0 && col + 1 <= field->y)
+          {
+            tying_cell(field->cells[row][col], field->cells[row - 1][col + 1], left_buttom);
+          }
+        }
+        else if (where == left)
+        {
+          if (row - 1 >= 0)
+          {
+            tying_cell(field->cells[row][col], field->cells[row - 1][col], left);
+          }
+        }
+        else if (where == left_top)
+        {
+          if (row - 1 >= 0 && col - 1 >= 0)
+          {
+            tying_cell(field->cells[row][col], field->cells[row - 1][col - 1], left_top);
+          }
+        }
+      }
     }
   }
 }
@@ -116,8 +174,7 @@ activate_mines_in_cells(
 
 void
 active_cell(
-    field_s *field,
-    size_t coord)
+    field_s *field)
 {
 
 }

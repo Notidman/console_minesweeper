@@ -1,7 +1,5 @@
 #include "tester.h"
 #include <assert.h>
-#include <math.h>
-#include <assert.h>
 
 void
 test_field_content_mines(
@@ -27,8 +25,7 @@ void
 test_field_tying(
     field_s *field)
 {
-  double mid = sqrt(field->S);
-  active_cell(field, mid);
-  assert(!(field->cells[0][0]->activated
+  active_cell(field);
+  assert(!(field->cells[field->x/2][field->y/2]->activated
         == true ));
 }
