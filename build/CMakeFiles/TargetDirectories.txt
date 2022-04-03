@@ -1,3 +1,0 @@
-/home/notidman/Prg/git_projects/console_minesweeper/build/CMakeFiles/console_minesweeper.dir
-/home/notidman/Prg/git_projects/console_minesweeper/build/CMakeFiles/edit_cache.dir
-/home/notidman/Prg/git_projects/console_minesweeper/build/CMakeFiles/rebuild_cache.dir
